@@ -1,11 +1,10 @@
 import React, {Component} from "react";
-import Book from "../Book";
+import Book from "../components/Book";
 
 class BooksPage extends Component {
 
     state = {
         data: [],
-        name: "daro"
     }
 
     componentDidMount() {

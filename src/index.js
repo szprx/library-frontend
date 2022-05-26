@@ -6,6 +6,7 @@ import BooksPage from "./page/BooksPage";
 import AboutPage from "./page/AboutPage";
 import BookDetailsPage from "./page/BookDetailsPage";
 import AddBookPage from "./page/AddBookPage";
+import UpdateBookPage from "./page/UpdateBookPage";
 
 
 ReactDOM.render((
@@ -19,6 +20,7 @@ ReactDOM.render((
             <Route path={"/about"}> <AboutPage/></Route>
             <Route path={"/books"}> <BooksPage/></Route>
             <Route path={"/addBook"}> <AddBookPage/></Route>
+            <Route path={"/book/update/:id"}> <UpdateBookPage/></Route>
             <Route path={"/book/:id"}> <BookDetailsPage/></Route>
             <Route path={"/"}> <App/></Route>
         </Switch>

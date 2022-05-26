@@ -4,8 +4,8 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import App from "./App";
 import BooksPage from "./page/BooksPage";
 import AboutPage from "./page/AboutPage";
-import AddBook from "./page/AddBookPage";
 import BookDetailsPage from "./page/BookDetailsPage";
+import AddBookPage from "./page/AddBookPage";
 
 
 ReactDOM.render((
@@ -18,7 +18,7 @@ ReactDOM.render((
         <Switch>
             <Route path={"/about"}> <AboutPage/></Route>
             <Route path={"/books"}> <BooksPage/></Route>
-            <Route path={"/addBook"}> <AddBook/></Route>
+            <Route path={"/addBook"}> <AddBookPage/></Route>
             <Route path={"/book/:id"}> <BookDetailsPage/></Route>
             <Route path={"/"}> <App/></Route>
         </Switch>

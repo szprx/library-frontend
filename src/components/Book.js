@@ -7,7 +7,7 @@ class Book extends Component {
     render() {
         return (
             <div>
-                <li>
+                <li className={"singleBook"}>
                     <Link to={"/book/" + this.props.info.id}> {this.props.info.title}</Link>
                 </li>
             </div>)

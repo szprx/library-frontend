@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Book from "../components/Book";
 
-class BooksPage extends Component {
+class AllBooksPage extends Component {
 
     state = {
         data: [],
@@ -24,4 +24,4 @@ class BooksPage extends Component {
     }
 }
 
-export default BooksPage;
+export default AllBooksPage;

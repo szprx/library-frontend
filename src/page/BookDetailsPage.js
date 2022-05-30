@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 const BookDetailsPage = () => {
 
     const {id} = useParams();
-    const [hasError, setErrors] = useState(false);
+    const [, setErrors] = useState(false);
     const [book, setBook] = useState({})
 
     async function fetchData() {
@@ -25,7 +25,6 @@ const BookDetailsPage = () => {
             <p>{book.author}</p>
             <p>{book.description}</p>
             <p>{book.releaseYear}</p>
-            <Link to={"/book/update/" + id}> UPDATE</Link>
         </div>
     );
 }

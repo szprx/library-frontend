@@ -1,13 +1,16 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
+
 
 class AddBookPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "Tytul",
-            author: "autor",
-            description: "opis",
-            releaseYear: 9999
+            id: 0,
+            title: "Tytul nieznany",
+            author: "Autor nieznany",
+            description: "Opis książki",
+            releaseYear: 9999,
         };
 
         this.create = this.create.bind(this);
@@ -22,7 +25,7 @@ class AddBookPage extends Component {
                 "accept": "application/json"
             },
             "body": JSON.stringify({
-                id: 0,
+                id: this.state.id,
                 title: this.state.title,
                 author: this.state.author,
                 description: this.state.description,
@@ -31,7 +34,7 @@ class AddBookPage extends Component {
         })
             .then(response => response.json())
             .then(response => {
-                console.log(response)
+                console.log(response);
             })
             .catch(err => {
                 console.log(err);
@@ -68,9 +71,18 @@ class AddBookPage extends Component {
                                onChange={(e) => this.handleChange({releaseYear: e.target.value})}/>
                     </label>
                     <br/>
-                    <button type='button'
-                            onClick={(e) => this.create(e)}>
+                    <button className={"add"} type='button'
+                            onClick={(e) => {
+                                this.create(e);
+                                alert("Dodano książkę: " +
+                                    "\nTytuł:" + this.state.title +
+                                    "\nAutor:" + this.state.author +
+                                    "\nOpis:" + this.state.description +
+                                    "\nRok wydania:" + this.state.releaseYear);
+                            }}>
+                        {<Link className={"page-link"} to="/books">Dodaj ksiązkę</Link>}
                     </button>
+
                 </form>
             </div>
         );

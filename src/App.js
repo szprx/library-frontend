@@ -1,24 +1,24 @@
 import React, {Component} from "react";
-import "./style/AppStyle.css"
 import {Link} from "react-router-dom";
 
 class App extends Component {
 
     render() {
         return (
-            <div>
-                KSIEGARNIA
-                <ul>
-                    <li>
-                        <Link to="/books">LISTA KSIĄŻEK</Link>
+            <div className={"container"}>
+                <h1>KSIEGARNIA</h1>
+                <ul className={"home-list"}>
+                    <li className={"navbar"}>
+                        <Link className={"main-page-link"} to="/books"
+                        >LISTA KSIĄŻEK</Link>
                     </li>
-                    <li>
-
-                        <Link to="/addBook">DODAJ KSIĄŻKE</Link>
+                    <li className={"navbar"}>
+                        <Link className={"main-page-link"} to="/addBook">DODAJ KSIĄŻKE</Link>
                     </li>
-                    <li>
-                        <Link to="/about">O NAS</Link>
+                    <li className={"navbar"}>
+                        <Link className={"main-page-link"} to="/about">O NAS</Link>
                     </li>
+                    <br/>
                 </ul>
             </div>
         );

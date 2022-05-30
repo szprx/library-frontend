@@ -1,27 +1,37 @@
-import React, {Component} from "react";
-import Book from "../components/Book";
+import React, {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
-class AllBooksPage extends Component {
+const AllBooksPage = () => {
 
-    state = {
-        data: [],
+    const [, setErrors] = useState(false);
+    const [books, setBooks] = useState([]);
+
+    async function getAllBooks() {
+        const res = await fetch("http://localhost:8080/book/all");
+        res
+            .json()
+            .then(res => setBooks(res))
+            .catch(err => setErrors(err))
     }
 
-    componentDidMount() {
-        fetch('http://localhost:8080/book/all')
-            .then(response => response.json())
-            .then(data => {
-                    console.log(data);
-                    this.setState({data})
-                }
-            );
-    }
+    useEffect(() => {
+        getAllBooks();
+    })
 
-    render() {
-        return (<div>
-            <ul>{this.state.data.map(book => <Book info={book}/>)}</ul>
+
+    return (
+        <div>
+            <ul>{books.map((book) => (
+                <li className={"singleBook"}>
+                    <Link className={"page-link"}
+                          to={"/book/" + book.id}>
+                        {book.title}
+                    </Link>
+                </li>
+
+            ))}
+            </ul>
         </div>);
-    }
 }
 
 export default AllBooksPage;

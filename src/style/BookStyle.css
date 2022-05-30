@@ -2,7 +2,7 @@ body {
     background-color: cornflowerblue;
 }
 
-h1 {
+h1.page-title {
     text-align: center;
     font-family: "Century Schoolbook";
     font-size: xxx-large;
@@ -27,7 +27,6 @@ li {
 
 li.navbar {
     alignment: center;
-    background-color: white;
     float: left;
 }
 
@@ -36,38 +35,13 @@ li.singleBook {
     text-decoration: none;
 }
 
-button.add {
-    border: none;
-    color: azure;
-    background-color: forestgreen;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-button.delete {
-    border: none;
-    color: azure;
-    background-color: darkred;
-    font-weight: bold;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
 .main-page-link {
     display: block; /*tak dziwnie blokuje*/
     padding: 8px;
-    color: inherit;
-    text-decoration: inherit;
+    color: dimgray;
+    font-weight: bold;
+    text-decoration: inherit; /*usuwa podkreslenie*/
+
 }
 
 .page-link {
@@ -75,3 +49,26 @@ button.delete {
     color: inherit;
     text-decoration: inherit;
 }
+
+button {
+    color: azure;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+button.add {
+    background-color: forestgreen;
+    padding: 15px 32px;
+}
+
+button.delete {
+    background-color: darkred;
+    padding: 5px 10px;
+}
+

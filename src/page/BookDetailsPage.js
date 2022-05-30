@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 const BookDetailsPage = () => {
 
@@ -7,7 +7,7 @@ const BookDetailsPage = () => {
     const [, setErrors] = useState(false);
     const [book, setBook] = useState({})
 
-    async function fetchData() {
+    async function getBook() {
         const res = await fetch("http://localhost:8080/book/" + id);
         res
             .json()
@@ -15,8 +15,14 @@ const BookDetailsPage = () => {
             .catch(err => setErrors(err))
     }
 
+    function deleteBook(id) {
+        fetch("http://localhost:8080/book/delete/" + id, {
+            method: 'DELETE'
+        });
+    }
+    //albo dodoc tu update albo zrobic to na tamtej stronie z lkista wszytskich ksiązek essa
     useEffect(() => {
-        fetchData();
+        getBook();
     });
 
     return (
@@ -25,6 +31,16 @@ const BookDetailsPage = () => {
             <p>{book.author}</p>
             <p>{book.description}</p>
             <p>{book.releaseYear}</p>
+            <br/>
+            <button className={"delete"} type='button'
+                    onClick={() => {
+                        if (window.confirm("Usunąć książkę?")) {
+                            deleteBook(id);
+                            // alert("Pomyślnie usunięto książkę")
+                        }
+                    }}>
+                {<Link className={"page-link"} to="/books">USUŃ</Link>}
+            </button>
         </div>
     );
 }

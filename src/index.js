@@ -7,7 +7,7 @@ import AboutPage from "./page/AboutPage";
 import BookDetailsPage from "./page/BookDetailsPage";
 import AddBookPage from "./page/AddBookPage";
 import "./style/BookStyle.css"
-
+import HomePage from "./page/HomePage";
 
 
 ReactDOM.render((
@@ -18,7 +18,7 @@ ReactDOM.render((
             <Route path={"/books"}> <AllBooksPage/></Route>
             <Route path={"/addBook"}> <AddBookPage/></Route>
             <Route path={"/book/:id"}> <BookDetailsPage/></Route>
-            {/*<Route path={"/"}> <App/></Route>*/}
+            <Route path={"/"}> <HomePage/></Route>
         </Switch>
     </Router>
 ), document.getElementById("root"));

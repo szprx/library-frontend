@@ -44,7 +44,7 @@ const BookDetailsPage = () => {
 
     function showBookDetails() {
         return <>
-            <p className={"title-author"}>{book.title}  -  {book.author}</p>
+            <p className={"title-author"}>{book.title} - {book.author}</p>
             <p className={"description"}>{book.description}</p>
             <p className={"release-year"}>Data wydania : {book.releaseYear}</p>
         </>;

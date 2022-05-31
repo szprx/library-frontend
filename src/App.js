@@ -4,12 +4,12 @@ import {Link} from "react-router-dom";
 const App = () => {
     return (
         <div className={"navbar"}>
-                <div className={"navbar-title"}>
-                    <Link className={"page-link"}
-                          to="/">
-                        KSIEGARNIA
-                    </Link>
-                </div>
+            <div className={"navbar-title"}>
+                <Link className={"page-link"}
+                      to="/">
+                    KSIEGARNIA
+                </Link>
+            </div>
             <div className={"navbar-links"}>
                 <ul className={"navbar-list"}>
                     <li className={"navbar-list-element"}>

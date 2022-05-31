@@ -30,23 +30,14 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
 }
+
 p {
     margin: 15px;
 }
+
 /*NAVBAR*/
 
-/*div.navbar {*/
-/*    background-color:  darkgoldenrod;*/
-/*    margin: auto auto 25px;*/
-/*    display: flex;*/
-/*    max-width: 90%;*/
-/*    padding: 1rem;*/
-/*    border-width: 2px;*/
-/*    border-style: solid;*/
-/*    border-color: black;*/
-/*}*/
-
-div.navbar{
+div.navbar {
     width: 100%;
     min-height: 6vh;
     box-sizing: border-box;
@@ -75,7 +66,7 @@ li.navbar-list-element {
     float: left;
 }
 
-.scrolled{
+.scrolled {
     position: fixed;
     top: 0;
     left: 0;
@@ -85,32 +76,38 @@ li.navbar-list-element {
 /*BOOK DETAILS*/
 div.book-details {
     margin-top: 20px;
-    background: rgba(255,228,196,0.8);
+    background: rgba(255, 228, 196, 0.8);
     margin-right: 40px;
     margin-left: 40px;
 }
+
 div.about-page {
-    background: rgba(255,228,196,0.8);
+    background: rgba(255, 228, 196, 0.8);
     margin-right: 40px;
     margin-left: 40px;
     margin-top: 20px;
     font-size: 30px;
 }
+
 p.title-author {
     font-size: 40px;
 
 }
+
 p.description {
     font-size: 28px;
 
 }
+
 p.release-year {
     font-size: 20px;
 }
+
 /*HOMEPAGE*/
 div.meme {
     text-align: center;
 }
+
 /*BOOK LIST*/
 
 li.singleBook {
@@ -122,7 +119,6 @@ li.singleBook {
 /*LINK*/
 
 .main-page-link {
-    /*display: block;*/
     padding: 15px;
     color: inherit;
     text-decoration: inherit;

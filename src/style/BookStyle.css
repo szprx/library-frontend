@@ -1,27 +1,21 @@
 body {
-    background-color: cornflowerblue;
+    background: url('https://www.kwantowo.pl/wp-content/uploads/2014/08/biblioteczka-ksiazki.jpg');
+    margin: 0;
 }
 
-h1.page-title {
-    text-align: center;
-    font-family: "Century Schoolbook";
-    font-size: xxx-large;
+li {
+    list-style: none;
 }
 
-div.container {
-    margin: 0 auto;
-    align-items: center;
-    display: flex;
-    max-width: 90%;
-    padding: 1rem;
-
+div {
+    margin: auto;
 }
+
 form {
-
+    padding-top: 15px;
+    padding-left: 40px;
 }
-label {
 
-}
 input {
     width: 450px;
     padding: 12px 20px;
@@ -36,32 +30,102 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
 }
+p {
+    margin: 15px;
+}
+/*NAVBAR*/
 
-ul.home-list {
-    font-size: x-large;
+/*div.navbar {*/
+/*    background-color:  darkgoldenrod;*/
+/*    margin: auto auto 25px;*/
+/*    display: flex;*/
+/*    max-width: 90%;*/
+/*    padding: 1rem;*/
+/*    border-width: 2px;*/
+/*    border-style: solid;*/
+/*    border-color: black;*/
+/*}*/
+
+div.navbar{
+    width: 100%;
+    min-height: 6vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgoldenrod;
+    transition: all .7s ease-in;
 }
 
-li {
-    list-style: none;
+div.navbar-title {
+    font-family: "Times New Roman";
+    font-size: xxx-large;
 }
 
-li.navbar {
-    alignment: center;
+div.navbar-links {
+    font-family: "Times New Roman";
+    font-size: larger;
+}
+
+ul.navbar-list {
+    font-size: larger;
+}
+
+li.navbar-list-element {
     float: left;
 }
 
-li.singleBook {
-    font-size: xxx-large;
-    text-decoration: none;
+.scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
 }
 
-.main-page-link {
-    display: block;
-    padding: 8px;
-    color: dimgray;
-    font-weight: bold;
-    text-decoration: inherit;
+/*BOOK DETAILS*/
+div.book-details {
+    margin-top: 20px;
+    background: rgba(255,228,196,0.8);
+    margin-right: 40px;
+    margin-left: 40px;
+}
+div.about-page {
+    background: rgba(255,228,196,0.8);
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+p.title-author {
+    font-size: 40px;
 
+}
+p.description {
+    font-size: 28px;
+
+}
+p.release-year {
+    font-size: 20px;
+}
+/*HOMEPAGE*/
+div.meme {
+    text-align: center;
+}
+/*BOOK LIST*/
+
+li.singleBook {
+    font-size: 40px;
+    text-decoration: none;
+    padding: 8px;
+}
+
+/*LINK*/
+
+.main-page-link {
+    /*display: block;*/
+    padding: 15px;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .page-link {
@@ -69,6 +133,8 @@ li.singleBook {
     color: inherit;
     text-decoration: inherit;
 }
+
+/*BUTTONS*/
 
 button {
     color: azure;
@@ -84,17 +150,21 @@ button {
 
 button.add {
     background-color: forestgreen;
-    padding: 15px 32px;
+    padding: 12px 18px;
+    margin-left: 40px;
 }
 
 button.update {
     background-color: darkorchid;
-    padding: 15px 32px;
+    padding: 12px 18px;
+    margin-left: 40px;
 }
 
 button.delete {
     background-color: darkred;
     padding: 5px 16px;
+    margin-right: 10px;
+
 }
 
 button.edit {

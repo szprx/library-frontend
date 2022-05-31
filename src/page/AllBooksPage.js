@@ -20,7 +20,7 @@ const AllBooksPage = () => {
 
 
     return (
-        <div>
+        <div className={"book-details"}>
             <ul>{books.map((book) => (
                 <li className={"singleBook"}>
                     <Link className={"page-link"}

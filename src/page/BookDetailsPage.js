@@ -37,26 +37,22 @@ const BookDetailsPage = () => {
     }
 
     function redirectionToUpdatePageButton() {
-        return <button className={"edit"} type='button'
-                       onClick={() => {
-                       }}>
+        return <button className={"edit"} type='button'>
             {<Link className={"page-link"} to={"/book/update/" + id}>Edytuj</Link>}
         </button>;
     }
 
     function showBookDetails() {
         return <>
-            <p>{book.title}</p>
-            <p>{book.author}</p>
-            <p>{book.description}</p>
-            <p>{book.releaseYear}</p>
+            <p className={"title-author"}>{book.title}  -  {book.author}</p>
+            <p className={"description"}>{book.description}</p>
+            <p className={"release-year"}>Data wydania : {book.releaseYear}</p>
         </>;
     }
 
     return (
-        <div>
+        <div className={"book-details"}>
             {showBookDetails()}
-            <br/>
             {deleteButton()}
             {redirectionToUpdatePageButton()}
         </div>

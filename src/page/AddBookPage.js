@@ -83,7 +83,7 @@ const AddBookPage = () => {
     }
 
     return (
-        <div>
+        <div className={"book-details"}>
             {getBookForm()}
             <br/>
             {addButton()}

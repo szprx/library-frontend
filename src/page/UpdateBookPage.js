@@ -64,12 +64,11 @@ const UpdateBookPage = () => {
             <br/>
             <label>OPIS
                 <br/>
-                <input className={"description"}
-                       type="textarea"
-                       name={"description"}
-                       onChange={(e) => setBookDescription(e.target.value)}
-                       value={bookDescription}
-                />
+                <textarea name={"description"}
+                          onChange={(e) => setBookDescription(e.target.value)}
+                          value={bookDescription}>
+
+                </textarea>
             </label>
             <br/>
             <label>ROK WYDANIA
@@ -87,7 +86,7 @@ const UpdateBookPage = () => {
     }
 
     return (
-        <div>
+        <div className={"book-details"}>
             {getBookForm(setBookTitle, bookTitle, setBookAuthor, bookAuthor, setBookDescription, bookDescription, setBookReleaseYear, bookReleaseYear)}
             <br/>
             {updateButton()}

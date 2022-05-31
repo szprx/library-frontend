@@ -67,8 +67,19 @@ button.add {
     padding: 15px 32px;
 }
 
+button.update {
+    background-color: darkorchid;
+    padding: 5px 16px;
+}
+
 button.delete {
     background-color: darkred;
-    padding: 5px 10px;
+    padding: 5px 16px;
 }
+
+button.edit {
+    background-color: darkorchid;
+    padding: 5px 16px;
+}
+
 

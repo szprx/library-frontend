@@ -28,7 +28,6 @@ const AllBooksPage = () => {
                         {book.title}
                     </Link>
                 </li>
-
             ))}
             </ul>
         </div>);

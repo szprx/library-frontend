@@ -16,6 +16,26 @@ div.container {
     padding: 1rem;
 
 }
+form {
+
+}
+label {
+
+}
+input {
+    width: 450px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 441px;
+    padding-bottom: 80px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
 
 ul.home-list {
     font-size: x-large;
@@ -36,11 +56,11 @@ li.singleBook {
 }
 
 .main-page-link {
-    display: block; /*tak dziwnie blokuje*/
+    display: block;
     padding: 8px;
     color: dimgray;
     font-weight: bold;
-    text-decoration: inherit; /*usuwa podkreslenie*/
+    text-decoration: inherit;
 
 }
 
@@ -69,7 +89,7 @@ button.add {
 
 button.update {
     background-color: darkorchid;
-    padding: 5px 16px;
+    padding: 15px 32px;
 }
 
 button.delete {

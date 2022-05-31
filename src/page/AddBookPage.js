@@ -30,11 +30,11 @@ const AddBookPage = () => {
         return <button className={"add"} type='button'
                        onClick={() => {
                            addBook();
-                           alert("Dodano książkę: " +
-                               "\nTytuł:" + bookTitle +
-                               "\nAutor:" + bookAuthor +
-                               "\nOpis:" + bookDescription +
-                               "\nRok wydania:" + bookReleaseYear);
+                           // alert("Dodano książkę: " +
+                           //     "\nTytuł:" + bookTitle +
+                           //     "\nAutor:" + bookAuthor +
+                           //     "\nOpis:" + bookDescription +
+                           //     "\nRok wydania:" + bookReleaseYear);
                        }}>
             {<Link className={"page-link"} to="/books">Dodaj ksiązkę</Link>}
         </button>;
@@ -42,7 +42,8 @@ const AddBookPage = () => {
 
     function getBookForm() {
         return <form>
-            <label>TYTUŁ:
+            <label>TYTUŁ
+                <br/>
                 <input type="text"
                        name={"title"}
                        onChange={(e) => setBookTitle(e.target.value)}
@@ -50,7 +51,8 @@ const AddBookPage = () => {
                 />
             </label>
             <br/>
-            <label>AUTOR:
+            <label>AUTOR
+                <br/>
                 <input type="text"
                        name={"author"}
                        onChange={(e) => setBookAuthor(e.target.value)}
@@ -58,15 +60,17 @@ const AddBookPage = () => {
                 />
             </label>
             <br/>
-            <label>OPIS:
-                <input type="textarea"
-                       name={"description"}
-                       onChange={(e) => setBookDescription(e.target.value)}
-                       value={bookDescription}
-                />
+            <label>OPIS
+                <br/>
+                <textarea name={"description"}
+                          onChange={(e) => setBookDescription(e.target.value)}
+                          value={bookDescription}>
+
+                </textarea>
             </label>
             <br/>
             <label>ROK WYDANIA
+                <br/>
                 <input type="number"
                        name={"releaseYear"}
                        min="1900"

@@ -30,14 +30,13 @@ const BookDetailsPage = () => {
                        onClick={() => {
                            if (window.confirm("Usunąć książkę?")) {
                                deleteBook();
-                               // alert("Pomyślnie usunięto książkę")
                            }
                        }}>
             {<Link className={"page-link"} to="/books">Usuń</Link>}
         </button>;
     }
 
-    function redirectionToUpdatePageButton() {//zmienic na przekirowanie
+    function redirectionToUpdatePageButton() {
         return <button className={"edit"} type='button'
                        onClick={() => {
                        }}>

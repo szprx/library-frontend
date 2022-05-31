@@ -1,43 +1,6 @@
 import React, {useState} from "react";
 import {Link, useParams} from "react-router-dom";
 
-function getBookForm(setBookTitle, bookTitle, setBookAuthor, bookAuthor, setBookDescription, bookDescription, setBookReleaseYear, bookReleaseYear) {
-    return <form>
-        <label>TYTUŁ:
-            <input type="text"
-                   name={"title"}
-                   onChange={(e) => setBookTitle(e.target.value)}
-                   value={bookTitle}
-            />
-        </label>
-        <br/>
-        <label>AUTOR:
-            <input type="text"
-                   name={"author"}
-                   onChange={(e) => setBookAuthor(e.target.value)}
-                   value={bookAuthor}
-            />
-        </label>
-        <br/>
-        <label>OPIS:
-            <input type="textarea"
-                   name={"description"}
-                   onChange={(e) => setBookDescription(e.target.value)}
-                   value={bookDescription}
-            />
-        </label>
-        <br/>
-        <label>ROK WYDANIA
-            <input type="number"
-                   name={"releaseYear"}
-                   min="1900"
-                   max={new Date().getFullYear()}
-                   onChange={(e) => setBookReleaseYear(e.target.value)}
-                   value={bookReleaseYear}
-            />
-        </label>
-    </form>;
-}
 
 const UpdateBookPage = () => {
 
@@ -69,7 +32,7 @@ const UpdateBookPage = () => {
         return <button className={"update"} type='button'
                        onClick={() => {
                            updateBook();
-                           alert("Dodano książkę: " +
+                           alert("Zaktualizowano książkę jesli podano poprawne dane: " +
                                "\nTytuł:" + bookTitle +
                                "\nAutor:" + bookAuthor +
                                "\nOpis:" + bookDescription +
@@ -77,6 +40,50 @@ const UpdateBookPage = () => {
                        }}>
             {<Link className={"page-link"} to="/books">Zaktualizuj ksiązkę</Link>}
         </button>;
+    }
+
+    function getBookForm(setBookTitle, bookTitle, setBookAuthor, bookAuthor, setBookDescription, bookDescription, setBookReleaseYear, bookReleaseYear) {
+        return <form>
+            <label>TYTUŁ
+                <br/>
+                <input type="text"
+                       name={"title"}
+                       onChange={(e) => setBookTitle(e.target.value)}
+                       value={bookTitle}
+                />
+            </label>
+            <br/>
+            <label>AUTOR
+                <br/>
+                <input type="text"
+                       name={"author"}
+                       onChange={(e) => setBookAuthor(e.target.value)}
+                       value={bookAuthor}
+                />
+            </label>
+            <br/>
+            <label>OPIS
+                <br/>
+                <input className={"description"}
+                       type="textarea"
+                       name={"description"}
+                       onChange={(e) => setBookDescription(e.target.value)}
+                       value={bookDescription}
+                />
+            </label>
+            <br/>
+            <label>ROK WYDANIA
+                <br/>
+                <input type="number"
+                       name={"releaseYear"}
+                       min="1900"
+                       max={new Date().getFullYear()}
+                       step={1}
+                       onChange={(e) => setBookReleaseYear(e.target.value)}
+                       value={bookReleaseYear}
+                />
+            </label>
+        </form>;
     }
 
     return (

@@ -66,19 +66,13 @@ li.navbar-list-element {
     float: left;
 }
 
-.scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: lightblue;
-}
-
 /*BOOK DETAILS*/
 div.book-details {
     margin-top: 20px;
     background: rgba(255, 228, 196, 0.8);
     margin-right: 40px;
     margin-left: 40px;
+    white-space: pre-wrap;
 }
 
 div.about-page {
@@ -167,5 +161,3 @@ button.edit {
     background-color: darkorchid;
     padding: 5px 16px;
 }
-
-
